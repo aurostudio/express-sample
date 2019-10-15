@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [      
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@babel/plugin-transform-regenerator", "@babel/plugin-transform-runtime"]
+    },
+    "production": {
+      "plugins": ["@babel/plugin-transform-regenerator", "@babel/plugin-transform-runtime"]
+    }
+  }
+}

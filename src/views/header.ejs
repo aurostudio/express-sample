@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+
+    <link href="/css/main.min.css" rel="stylesheet">
+
+    <% if(typeof stylesheets == "object" && Array.isArray(stylesheets)) { for(var i=0;i<stylesheets.length;i++) { %>
+    <link href="/css/<%= stylesheets[i] -%>.css" rel="stylesheet">
+    <% } } %>
+
+    <link href="/icons/snapfile.png" rel="icon" type="image/png">
+
+    <script src="/js/lib/jquery-2.2.0.min.js"></script>
+
+    <% if(typeof scripts == "object" && Array.isArray(scripts)) { for(var i=0;i<scripts.length;i++) { %>
+    <script src="/js/<%= scripts[i] -%>.js"></script>
+    <% } } %>
+
+    <script>
+        var api = "<%= api %>";
+        var authToken = "<%= authToken %>";
+    </script>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/img/snapfile.svg" width="320" height="auto">
+    </div>
